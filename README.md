@@ -27,4 +27,10 @@ npm run build
 npm run main
 ```
 
+If you change the schema and want to re-generate the generated code, run
+
+```bash
+npm run aphro
+```
+
 For more info, see the `Aphrodite` [quickstart guide](https://aphrodite.sh/docs/quickstart)
