@@ -19,7 +19,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function main() {
-  const db = connect("test.db");
+  // not prividing a file name uses an in-memory db
+  // providing a file name to connect will save changes to disk.
+  const db = connect();
   await createTables(db);
   const ctx = context(anonymous(), basicResolver(db));
 
